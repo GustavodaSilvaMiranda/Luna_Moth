@@ -7,7 +7,10 @@ public class BearScript : KinematicBody2D
 	PackedScene BearProjectile; // Referência ao cena do projétil.
 	Sprite sprite; //Objeto de sprite.
 	AnimationPlayer animationPlayer; //Objeto de animação.
-	bool BearAttacking = true;
+	bool BearAttacking = false;
+	Vector2 spawnPosition = Vector2.Zero;
+	int SelectAttackPattern = 0;
+	RandomNumberGenerator random = new RandomNumberGenerator(); // Instância do gerador de números aleatórios.
 	
 	public override void _Ready()
 	{
@@ -20,36 +23,53 @@ public class BearScript : KinematicBody2D
 	
 	public override void _PhysicsProcess(float delta)
 	{
-		//Controla as físicas do urso.
 		SetAnimation();
 	}
+	
 	private void _on_Timer_timeout()
 	{
-		ActiveShoot();
+		BearAttacking = true;
+		Attack();
 	}
 	
-	public void ActiveShoot()
+	public async void ActiveShoot()
 	{
+		
+		SelectAttackPattern = random.RandiRange(1, 2);
+		if(SelectAttackPattern == 1)
+		{
+			spawnPosition = new Vector2(200, 60);
+		}
+		else
+		{
+			spawnPosition = new Vector2(200, 145);
+		}
+		//200, 60 - cima
+		//200, 145 - baixo
+		
 		if (BearAttacking)
 		{
-			ShootProjectile();
+			ShootProjectile(spawnPosition);
 		}
+		// Atualiza a animação com base no novo estado;
 		// Independentemente de estar atacando ou não, inverte o valor de BearAttacking.
-		BearAttacking = !BearAttacking;
-		// Atualiza a animação com base no novo estado.
-		SetAnimation(); 
+		await ToSignal(GetTree().CreateTimer(0.8f), "timeout");
+		BearAttacking = false;
 	}
 	
 	public void SetAnimation()
 	{
-		if (BearAttacking)
-		{
-			animationPlayer.Play("Attack");
-		}
-		else
+		if(!BearAttacking)
 		{
 			animationPlayer.Play("Idle");
 		}
+	}
+	
+	public async void Attack()
+	{
+		animationPlayer.Play("Attack");
+		await ToSignal(GetTree().CreateTimer(0.5f), "timeout");
+		ActiveShoot();
 	}
 	
 	private void OnBearHitboxBodyEntered(PlayerScript player)
@@ -60,16 +80,14 @@ public class BearScript : KinematicBody2D
 		player.Knockback();
 	}
 	
-	public void ShootProjectile()
+	public void ShootProjectile(Vector2 spawnPosition)
 	{
-		// Cria uma instância do projétil e define sua posição e direção.
 		BearProjectileScript projectile = (BearProjectileScript)BearProjectile.Instance();
 		projectileContainer.AddChild(projectile);
 
-		// Define a direção do projétil como esquerda (esquerda na coordenada X).
 		Vector2 direction = Vector2.Left;
 
-		projectile.Position = GlobalPosition;
+		projectile.Position = spawnPosition;
 		projectile.Shoot(direction);
 	}
 }

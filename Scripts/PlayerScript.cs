@@ -80,13 +80,23 @@ public class PlayerScript : KinematicBody2D
 		velocity.x = -knockbackDirection * knockbackIntesity;
 		velocity = MoveAndSlide(velocity);
 		WaitAnimationToEnd("Hit");
+		
 	}
-
+	
+	public void Damage()
+	{
+		if(health <= 0 && hitted == false)
+		{
+			QueueFree();
+		}
+	}
+	
 	public async void WaitAnimationToEnd(string animationName)
 	{
 		velocity.x = 0;
 		animationPlayer.Play(animationName);
 		await ToSignal(animationPlayer, "animation_finished");
 		hitted = false;
+		Damage();
 	}
 }

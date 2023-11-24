@@ -15,7 +15,7 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.166667, 0.333334, 0.5, 0.666668, 1.16667 ),
+"times": PoolRealArray( 0, 0.166667, 0.333334, 0.5, 0.666668, 1.002 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
 "update": 1,
 "values": [ 0, 1, 2, 3, 4, 5 ]
@@ -27,7 +27,7 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 1.16667 ),
+"times": PoolRealArray( 1.169 ),
 "transitions": PoolRealArray( 1 ),
 "update": 1,
 "values": [ ExtResource( 2 ) ]
@@ -51,7 +51,7 @@ tracks/3/loop_wrap = true
 tracks/3/imported = false
 tracks/3/enabled = true
 tracks/3/keys = {
-"times": PoolRealArray( 0, 0.500001, 0.666668 ),
+"times": PoolRealArray( 0, 0.501, 0.668 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 1,
 "values": [ true, false, true ]
@@ -81,7 +81,7 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 1 ),
+"times": PoolRealArray( 1.25 ),
 "transitions": PoolRealArray( 1 ),
 "update": 1,
 "values": [ ExtResource( 1 ) ]
@@ -93,7 +93,7 @@ tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 1 ),
+"times": PoolRealArray( 1.25 ),
 "transitions": PoolRealArray( 1 ),
 "update": 1,
 "values": [ 4 ]
@@ -185,8 +185,8 @@ shape = SubResource( 9 )
 disabled = true
 
 [node name="Timer" type="Timer" parent="."]
+wait_time = 2.0
 autostart = true
 
-[connection signal="animation_finished" from="BearAnimation" to="." method="_on_BearAnimation_animation_finished"]
 [connection signal="body_entered" from="BearHitbox" to="." method="OnBearHitboxBodyEntered"]
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

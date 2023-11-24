@@ -7,3 +7,21 @@ C:\Users\Alunos\Documents\LunaMoth\.mono\temp\obj\Debug\Luna Moth.AssemblyInfo.c
 C:\Users\Alunos\Documents\LunaMoth\.mono\temp\obj\Debug\Luna Moth.csproj.CoreCompileInputs.cache
 C:\Users\Alunos\Documents\LunaMoth\.mono\temp\obj\Debug\Luna Moth.dll
 C:\Users\Alunos\Documents\LunaMoth\.mono\temp\obj\Debug\Luna Moth.pdb
+G:\Meu Drive\Luna_Moth\LunaMoth_CSharp_14_11_2023\LunaMoth_Projectile\.mono\temp\bin\Debug\Luna Moth.dll
+G:\Meu Drive\Luna_Moth\LunaMoth_CSharp_14_11_2023\LunaMoth_Projectile\.mono\temp\bin\Debug\Luna Moth.pdb
+G:\Meu Drive\Luna_Moth\LunaMoth_CSharp_14_11_2023\LunaMoth_Projectile\.mono\temp\obj\Debug\Luna Moth.csproj.AssemblyReference.cache
+G:\Meu Drive\Luna_Moth\LunaMoth_CSharp_14_11_2023\LunaMoth_Projectile\.mono\temp\obj\Debug\Luna Moth.GeneratedMSBuildEditorConfig.editorconfig
+G:\Meu Drive\Luna_Moth\LunaMoth_CSharp_14_11_2023\LunaMoth_Projectile\.mono\temp\obj\Debug\Luna Moth.AssemblyInfoInputs.cache
+G:\Meu Drive\Luna_Moth\LunaMoth_CSharp_14_11_2023\LunaMoth_Projectile\.mono\temp\obj\Debug\Luna Moth.AssemblyInfo.cs
+G:\Meu Drive\Luna_Moth\LunaMoth_CSharp_14_11_2023\LunaMoth_Projectile\.mono\temp\obj\Debug\Luna Moth.csproj.CoreCompileInputs.cache
+G:\Meu Drive\Luna_Moth\LunaMoth_CSharp_14_11_2023\LunaMoth_Projectile\.mono\temp\obj\Debug\Luna Moth.dll
+G:\Meu Drive\Luna_Moth\LunaMoth_CSharp_14_11_2023\LunaMoth_Projectile\.mono\temp\obj\Debug\Luna Moth.pdb
+G:\Meu Drive\Luna_Moth\LunaMoth_CSharp_14_11_2023\LunaMoth\.mono\temp\bin\Debug\Luna Moth.dll
+G:\Meu Drive\Luna_Moth\LunaMoth_CSharp_14_11_2023\LunaMoth\.mono\temp\bin\Debug\Luna Moth.pdb
+G:\Meu Drive\Luna_Moth\LunaMoth_CSharp_14_11_2023\LunaMoth\.mono\temp\obj\Debug\Luna Moth.csproj.AssemblyReference.cache
+G:\Meu Drive\Luna_Moth\LunaMoth_CSharp_14_11_2023\LunaMoth\.mono\temp\obj\Debug\Luna Moth.GeneratedMSBuildEditorConfig.editorconfig
+G:\Meu Drive\Luna_Moth\LunaMoth_CSharp_14_11_2023\LunaMoth\.mono\temp\obj\Debug\Luna Moth.AssemblyInfoInputs.cache
+G:\Meu Drive\Luna_Moth\LunaMoth_CSharp_14_11_2023\LunaMoth\.mono\temp\obj\Debug\Luna Moth.AssemblyInfo.cs
+G:\Meu Drive\Luna_Moth\LunaMoth_CSharp_14_11_2023\LunaMoth\.mono\temp\obj\Debug\Luna Moth.csproj.CoreCompileInputs.cache
+G:\Meu Drive\Luna_Moth\LunaMoth_CSharp_14_11_2023\LunaMoth\.mono\temp\obj\Debug\Luna Moth.dll
+G:\Meu Drive\Luna_Moth\LunaMoth_CSharp_14_11_2023\LunaMoth\.mono\temp\obj\Debug\Luna Moth.pdb
