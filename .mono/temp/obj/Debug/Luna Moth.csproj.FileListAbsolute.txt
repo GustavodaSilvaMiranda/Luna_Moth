@@ -1,0 +1,9 @@
+C:\Users\Alunos\Documents\LunaMoth\.mono\temp\bin\Debug\Luna Moth.dll
+C:\Users\Alunos\Documents\LunaMoth\.mono\temp\bin\Debug\Luna Moth.pdb
+C:\Users\Alunos\Documents\LunaMoth\.mono\temp\obj\Debug\Luna Moth.csproj.AssemblyReference.cache
+C:\Users\Alunos\Documents\LunaMoth\.mono\temp\obj\Debug\Luna Moth.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Alunos\Documents\LunaMoth\.mono\temp\obj\Debug\Luna Moth.AssemblyInfoInputs.cache
+C:\Users\Alunos\Documents\LunaMoth\.mono\temp\obj\Debug\Luna Moth.AssemblyInfo.cs
+C:\Users\Alunos\Documents\LunaMoth\.mono\temp\obj\Debug\Luna Moth.csproj.CoreCompileInputs.cache
+C:\Users\Alunos\Documents\LunaMoth\.mono\temp\obj\Debug\Luna Moth.dll
+C:\Users\Alunos\Documents\LunaMoth\.mono\temp\obj\Debug\Luna Moth.pdb

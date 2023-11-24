@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=2]
+
+[sub_resource type="RectangleShape2D" id=31]
+extents = Vector2( 166.5, 14.5 )
+
+[node name="Floor" type="StaticBody2D"]
+position = Vector2( 116, 163 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorCollision" type="CollisionShape2D" parent="."]
+position = Vector2( 42.5, 0 )
+shape = SubResource( 31 )
