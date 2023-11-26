@@ -51,4 +51,6 @@ rotation = 1.5708
 position = Vector2( 29, -15 )
 
 [node name="Bee" parent="." instance=ExtResource( 8 )]
-position = Vector2( 56, 32 )
+position = Vector2( 18, 35 )
+collision_layer = 2
+collision_mask = 1

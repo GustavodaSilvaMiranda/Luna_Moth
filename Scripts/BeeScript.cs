@@ -1,5 +1,4 @@
 using Godot;
-using System;
 
 public class BeeScript : Node2D
 {
@@ -9,19 +8,21 @@ public class BeeScript : Node2D
 	private Sprite sprite;
 	private Timer dropTimer;
 	private bool Drop = false;
+	private float zigzagAmplitude = 1.0f; // Ajuste de amplitude do ziguezague
+	private float zigzagFrequency = 2.0f; // Ajuste de frequencia do ziguezague
 
 	public override void _Ready()
 	{
 		sprite = GetNode<Sprite>("BeeSprite");
 		Honey = GD.Load<PackedScene>("res://Scenes/Honey.tscn");
 
-		// Instancie e adicione o Timer ao nó pai
+		// Instancia e adiciona o Timer ao nó pai
 		dropTimer = new Timer();
 		dropTimer.WaitTime = 5.0f; // Tempo de espera em segundos
 		AddChild(dropTimer);
 		dropTimer.Connect("timeout", this, "_on_Timer_timeout");
 
-		// Inicie o timer
+		// Inicia o timer
 		dropTimer.Start();
 	}
 
@@ -33,6 +34,10 @@ public class BeeScript : Node2D
 
 	private void MoveBee(float delta)
 	{
+		// Ajusta a posição Y usando uma função senoidal para criar um movimento em ziguezague
+		float zigzagOffset = Mathf.Sin(OS.GetTicksMsec() * zigzagFrequency / 1000.0f) * zigzagAmplitude;
+		velocity.y = zigzagOffset;
+
 		Translate(velocity * speed * delta);
 	}
 
@@ -43,7 +48,7 @@ public class BeeScript : Node2D
 			DropHoney();
 		}
 		Drop = !Drop;
-		// Inicie o timer novamente
+		// Inicia o timer novamente
 		dropTimer.Start();
 	}
 

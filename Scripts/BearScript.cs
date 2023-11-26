@@ -1,6 +1,5 @@
 using Godot;
 
-
 public class BearScript : KinematicBody2D
 {
 	Node2D projectileContainer;
@@ -51,8 +50,7 @@ public class BearScript : KinematicBody2D
 		{
 			ShootProjectile(spawnPosition);
 		}
-		// Atualiza a animação com base no novo estado;
-		// Independentemente de estar atacando ou não, inverte o valor de BearAttacking.
+		
 		await ToSignal(GetTree().CreateTimer(0.8f), "timeout");
 		BearAttacking = false;
 	}
