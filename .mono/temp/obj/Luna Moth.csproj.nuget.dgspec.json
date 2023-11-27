@@ -10,11 +10,15 @@
         "projectUniqueName": "G:\\Meu Drive\\Luna_Moth\\LunaMoth_CSharp_14_11_2023\\LunaMoth\\Luna Moth.csproj",
         "projectName": "Luna Moth",
         "projectPath": "G:\\Meu Drive\\Luna_Moth\\LunaMoth_CSharp_14_11_2023\\LunaMoth\\Luna Moth.csproj",
-        "packagesPath": "C:\\Users\\Alunos\\.nuget\\packages\\",
+        "packagesPath": "C:\\Users\\gugam\\.nuget\\packages\\",
         "outputPath": "G:\\Meu Drive\\Luna_Moth\\LunaMoth_CSharp_14_11_2023\\LunaMoth\\.mono\\temp\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Alunos\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\gugam\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,6 +26,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {

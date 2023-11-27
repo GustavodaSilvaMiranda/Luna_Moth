@@ -8,8 +8,8 @@ public class BeeScript : Node2D
 	private Sprite sprite;
 	private Timer dropTimer;
 	private bool Drop = false;
-	private float zigzagAmplitude = 1.0f; // Ajuste de amplitude do ziguezague
-	private float zigzagFrequency = 2.0f; // Ajuste de frequencia do ziguezague
+	private float zigzagAmplitude = 0.5f; // Ajuste de amplitude do ziguezague
+	private float zigzagFrequency = 1.5f; // Ajuste de frequencia do ziguezague
 
 	public override void _Ready()
 	{
@@ -58,6 +58,14 @@ public class BeeScript : Node2D
 		honeyItem.Position = Position;
 		GetParent().AddChild(honeyItem);
 	}
+	
+	private void _on_Area2D_area_entered(object area)
+	{
+		if (area is AreaBeeDropObject)
+		{
+			GD.Print("Area Detectada");
+		}
+	}
 
 	private void CheckMapBounds()
 	{
@@ -82,3 +90,6 @@ public class BeeScript : Node2D
 		Position = position;
 	}
 }
+
+
+
