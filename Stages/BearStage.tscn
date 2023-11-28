@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Assets/Background/BearStage/Tree.png" type="Texture" id=1]
 [ext_resource path="res://Scenes/FloorPlatform.tscn" type="PackedScene" id=2]
@@ -8,10 +8,12 @@
 [ext_resource path="res://Scenes/Honey.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Scenes/ContainerNode.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Scenes/Bee.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Scripts/Reset.cs" type="Script" id=9]
 
 [sub_resource type="RectangleShape2D" id=1]
 
 [node name="BearStage" type="Node2D"]
+script = ExtResource( 9 )
 
 [node name="Player" parent="." instance=ExtResource( 5 )]
 position = Vector2( 113, 64 )

@@ -14,6 +14,11 @@ config/name="LunaMoth"
 run/main_scene="res://Stages/BearStage.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+Global="*res://Scripts/Global.cs"
+Hud="*res://Scenes/HUD.tscn"
+
 [display]
 
 window/size/width=320
