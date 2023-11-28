@@ -59,12 +59,10 @@ public class BeeScript : Node2D
 		GetParent().AddChild(honeyItem);
 	}
 	
-	private void _on_Area2D_area_entered(object area)
+	private void _on_AreaDropObject_area_entered(object area)
 	{
-		if (area is AreaBeeDropObject)
-		{
-			GD.Print("Area Detectada");
-		}
+		GD.Print(area);
+		DropHoney();
 	}
 
 	private void CheckMapBounds()
