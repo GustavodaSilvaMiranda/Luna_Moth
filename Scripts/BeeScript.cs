@@ -6,24 +6,14 @@ public class BeeScript : Node2D
 	private float speed = 50.0f;
 	private Vector2 velocity = new Vector2(1, 0);
 	private Sprite sprite;
-	private Timer dropTimer;
-	private bool Drop = false;
 	private float zigzagAmplitude = 0.5f; // Ajuste de amplitude do ziguezague
 	private float zigzagFrequency = 1.5f; // Ajuste de frequencia do ziguezague
+	private int Cont = 0;
 
 	public override void _Ready()
 	{
 		sprite = GetNode<Sprite>("BeeSprite");
 		Honey = GD.Load<PackedScene>("res://Scenes/Honey.tscn");
-
-		// Instancia e adiciona o Timer ao nó pai
-		dropTimer = new Timer();
-		dropTimer.WaitTime = 5.0f; // Tempo de espera em segundos
-		AddChild(dropTimer);
-		dropTimer.Connect("timeout", this, "_on_Timer_timeout");
-
-		// Inicia o timer
-		dropTimer.Start();
 	}
 
 	public override void _Process(float delta)
@@ -41,17 +31,6 @@ public class BeeScript : Node2D
 		Translate(velocity * speed * delta);
 	}
 
-	private void _on_Timer_timeout()
-	{
-		if (Drop)
-		{
-			DropHoney();
-		}
-		Drop = !Drop;
-		// Inicia o timer novamente
-		dropTimer.Start();
-	}
-
 	private void DropHoney()
 	{
 		var honeyItem = (HoneyScript)Honey.Instance();
@@ -59,9 +38,21 @@ public class BeeScript : Node2D
 		GetParent().AddChild(honeyItem);
 	}
 	
-	private void _on_AreaDropObject_area_entered(object area)
+	
+	
+	  private void _on_AreaDropObject_area_entered(Area area)
 	{
-		GD.Print(area);
+		if(Cont == 3)
+		{
+			 CallDeferred("_process_drop_honey");
+			Cont = 0;
+		}
+		Cont ++;
+	   
+	}
+
+	private void _process_drop_honey()
+	{
 		DropHoney();
 	}
 

@@ -1,2 +1,2 @@
-﻿51345
-C:/Users/Administrator/Desktop/Godot/Godot_v3.5.3-stable_mono_win64/Godot_v3.5.3-stable_mono_win64.exe
+﻿55970
+C:/Users/gugam/OneDrive/Área de Trabalho/Godot/Godot_v3.5.3-stable_mono_win64.exe

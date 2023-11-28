@@ -65,11 +65,12 @@ __meta__ = {
 }
 
 [node name="AreaDropObject" type="Area2D" parent="AreaBeeDropObject"]
-collision_layer = 7
-collision_mask = 7
+collision_layer = 8
+collision_mask = 128
 priority = 2.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AreaBeeDropObject/AreaDropObject"]
+scale = Vector2( 0.03, 1 )
 shape = SubResource( 1 )
 
 [connection signal="area_entered" from="AreaBeeDropObject/AreaDropObject" to="Bee" method="_on_AreaDropObject_area_entered"]
