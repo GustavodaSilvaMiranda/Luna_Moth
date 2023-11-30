@@ -14,10 +14,9 @@ public class HoneyScript : RigidBody2D
 
 	private void _on_Area2D_body_entered(PlayerScript player)
 	{
-		QueueFree();
-		
 		// Acessa a instância do script Global e atualiza a variável honey.
 		Global.Instance.honey += honey;
+		QueueFree();				
 	}
 }
 

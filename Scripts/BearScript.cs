@@ -74,6 +74,8 @@ public class BearScript : KinematicBody2D
 	{	
 		//Se um corpo entrar na área, tomará um ataque.
 		player.health -= 1;
+		//entrar codigo de tirar a vida, mudand a textura da barra de vida
+		
 		player.knockbackDirection = 1;
 		player.Knockback();
 	}

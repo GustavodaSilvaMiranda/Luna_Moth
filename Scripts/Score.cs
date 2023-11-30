@@ -13,7 +13,7 @@ public class Score : Label
 	}
 	public override void _PhysicsProcess(float delta)
 	{
-		Text = Global.Instance.honey.ToString();
+		Text = Global.Instance.honey.ToString() + "/3";
 	}
 
 //  // Called every frame. 'delta' is the elapsed time since the previous frame.

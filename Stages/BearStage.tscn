@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Assets/Background/BearStage/Tree.png" type="Texture" id=1]
 [ext_resource path="res://Scenes/FloorPlatform.tscn" type="PackedScene" id=2]
@@ -9,6 +9,8 @@
 [ext_resource path="res://Scenes/ContainerNode.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Scenes/Bee.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Scripts/Reset.cs" type="Script" id=9]
+[ext_resource path="res://Scenes/MusicNo.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Scenes/HUD.tscn" type="PackedScene" id=11]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -74,5 +76,9 @@ priority = 2.0
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AreaBeeDropObject/AreaDropObject"]
 scale = Vector2( 0.03, 1 )
 shape = SubResource( 1 )
+
+[node name="Music" parent="." instance=ExtResource( 10 )]
+
+[node name="HUD" parent="." instance=ExtResource( 11 )]
 
 [connection signal="area_entered" from="AreaBeeDropObject/AreaDropObject" to="Bee" method="_on_AreaDropObject_area_entered"]

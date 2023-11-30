@@ -5,8 +5,7 @@ public class StartScreen : Control
 {    
 	public override void _Ready()
 	{
-		 GetNode<TextureButton>("Controls/StartButton").GrabFocus();
-		
+		 GetNode<TextureButton>("Controls/StartButton").GrabFocus();		
 	}
 
 	public void _on_StartButton_pressed()
@@ -14,7 +13,7 @@ public class StartScreen : Control
 		GetTree().ChangeScene("res://Stages/BearStage.tscn");
 	}
 
-	public void _on_QuitButton_pressed()
+	public void _on_LeaveButton_pressed()
 	{
 		GetTree().Quit();
 	}

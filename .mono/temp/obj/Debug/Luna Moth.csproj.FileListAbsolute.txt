@@ -34,3 +34,4 @@ C:\Users\Administrator\Desktop\Luna\Luna_Moth\.mono\temp\obj\Debug\Luna Moth.dll
 C:\Users\Administrator\Desktop\Luna\Luna_Moth\.mono\temp\obj\Debug\Luna Moth.pdb
 C:\Users\Administrator\Desktop\Luna\Luna_Moth\.mono\temp\bin\Debug\Luna Moth.dll
 C:\Users\Administrator\Desktop\Luna\Luna_Moth\.mono\temp\bin\Debug\Luna Moth.pdb
+C:\Users\Administrator\Desktop\Luna\Luna_Moth\.mono\temp\obj\Debug\Luna Moth.sourcelink.json

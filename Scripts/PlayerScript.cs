@@ -33,6 +33,7 @@ public class PlayerScript : KinematicBody2D
 		}
 	
 		velocity = MoveAndSlide(velocity,Vector2.Up);	
+		CheckHealth(this);
 	}
 
 	public void GetInput()
@@ -99,4 +100,28 @@ public class PlayerScript : KinematicBody2D
 		hitted = false;
 		Damage();
 	}
+			public void CheckHealth(PlayerScript player)
+			{
+				switch (player.health)
+				{
+					case 3:
+						GetNode<TextureRect>("../HUD/Holder/TextureRect").Texture = (Texture)ResourceLoader.Load("res://Assets/HealthBar/HealthBar10.png");
+						break;
+
+					case 2:
+						GetNode<TextureRect>("../HUD/Holder/TextureRect").Texture = (Texture)ResourceLoader.Load("res://Assets/HealthBar/HealthBar6.png");
+						break;
+
+					case 1:
+						GetNode<TextureRect>("../HUD/Holder/TextureRect").Texture = (Texture)ResourceLoader.Load("res://Assets/HealthBar/HealthBar3.png");
+						break;
+
+					case 0:
+					GetNode<TextureRect>("../HUD/Holder/TextureRect").Texture = (Texture)ResourceLoader.Load("res://Assets/HealthBar/HealthBar0.png");
+					break;
+
+					default:
+						break;
+				}
+			}
 }

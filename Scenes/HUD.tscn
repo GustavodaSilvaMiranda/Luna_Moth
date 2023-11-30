@@ -1,10 +1,13 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Assets/Background/GUI/Fonts/Pacifico-Regular.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Assets/Characters/Bee/Honey_Icon.png" type="Texture" id=2]
 [ext_resource path="res://Scripts/Score.cs" type="Script" id=3]
+[ext_resource path="res://Assets/HealthBar/HealthBar10.png" type="Texture" id=4]
+[ext_resource path="res://Scenes/TextureRect.cs" type="Script" id=5]
 
 [sub_resource type="DynamicFont" id=1]
+size = 14
 outline_size = 1
 extra_spacing_top = -9
 font_data = ExtResource( 1 )
@@ -16,18 +19,18 @@ margin_right = 40.0
 margin_bottom = 40.0
 
 [node name="Icon" type="TextureRect" parent="Holder"]
-margin_left = 6.0
-margin_top = 3.0
-margin_right = 30.0
-margin_bottom = 27.0
+margin_left = 12.0
+margin_top = 8.0
+margin_right = 28.0
+margin_bottom = 23.927
 texture = ExtResource( 2 )
 expand = true
 
 [node name="Score" type="Label" parent="Holder"]
-margin_left = 7.0
-margin_top = 2.0
-margin_right = 39.0
-margin_bottom = 31.0
+margin_left = 18.0
+margin_top = 4.0
+margin_right = 50.0
+margin_bottom = 33.0
 custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 custom_fonts/font = SubResource( 1 )
@@ -35,3 +38,10 @@ text = "0"
 align = 2
 valign = 1
 script = ExtResource( 3 )
+
+[node name="TextureRect" type="TextureRect" parent="Holder"]
+margin_left = 2.0
+margin_right = 322.0
+margin_bottom = 180.0
+texture = ExtResource( 4 )
+script = ExtResource( 5 )
